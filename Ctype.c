@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <ctype.h>
 
-char var[5];        //declare a Array call var
+char var[5];        //declare a Array called var
 
 void PrintFunction(){       //PrintFunction function
     for (int i=0; i<5; i++){        //case 0~case 4
