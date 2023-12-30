@@ -13,7 +13,7 @@ struct circle{
 int main(){
     struct circle C1,C2;
     scanf("%lf %lf %lf %lf %lf %lf",&C1.center.x, &C1.center.y, &C1.r, &C2.center.x, &C2.center.y, &C2.r);
-    double distance = sqrt(pow(C2.center.x-C1.center.x, 2)+ pow(C2.center.y-C1.center.y, 2));
+    double distance = sqrt(pow(C2.center.x-C1.center.x, 2)+ pow(C2.center.y-C1.center.y, 2));    //((x1-x2)^2+(y1-y2)^2)^(1/2)圓心距離
     if(((distance+C2.r)<C1.r) || ((distance+C1.r)<C2.r)){
         printf("3\n");
     }else if (C1.center.x==C2.center.x && C1.center.y==C2.center.y && C1.r==C2.r){
