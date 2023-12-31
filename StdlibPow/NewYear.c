@@ -1,7 +1,9 @@
 #ifdef __linux__
     #define OS_NAME "Linux"
+    #include<unistd.h>
 #elif _WIN32
     #define OS_NAME "Windows"
+    #include<windows.h>
 #else
     #error "Unsupported operating system"
 #endif
@@ -49,6 +51,9 @@ int main(){
     
     char command[50];
     (OS_NAME=="Linux")? strcpy(command, "cat test.txt"):strcpy(command, "type test.txt");
+    system(command);
+    (OS_NAME=="Linux")? sleep(5):Sleep(5000);
+    (OS_NAME=="Linux")? strcpy(command, "clear"):strcpy(command, "cls");
     system(command);
     return 0;
 }
