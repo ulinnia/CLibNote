@@ -6,7 +6,9 @@
 #include <stdbool.h>
 
 void findSpace(nod_t *current, nod_t *NewPtr){
-    if(current->next==NULL || ((nod_t *)(current->next))->inf.score <= NewPtr->inf.score){
+    if(current->next != NULL && ((nod_t *)(current->next))->inf.score == NewPtr->inf.score && current->next->inf.Std_num < NewPtr->inf.Std_num){
+        findSpace(current->next, NewPtr);
+    }else if(current->next==NULL || ((nod_t *)(current->next))->inf.score <= NewPtr->inf.score){
         NewPtr->next = current->next;
         current->next = NewPtr;
     }else if (((nod_t *)(current->next))->inf.score > NewPtr->inf.score){
