@@ -35,10 +35,8 @@ int main(){
                 printf("===================================================\n");
                 break;
             case '3':
-                printf("===================================================\n");
                 int DelSucc = Del(head);
-                (DelSucc==1)? printf("Delete Success!\n"):printf("Get The Wrong StdID!!\n");
-                printf("===================================================\n");
+                (DelSucc==1)? printf("Delete Success!\n\n\n"):printf("Get The Wrong StdID!!\n");
                 break;
             case '4':
                 printf("Bye Bye!!!Momtiger ^_^\n");

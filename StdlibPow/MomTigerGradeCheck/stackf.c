@@ -77,13 +77,16 @@ int Del(nod_t *head){
     printf("The StdID Which you want to Delete: ");
     int temp;
     scanf("%d", &temp);
+    flushBuffer();
     nod_t *current = head;
     while(current->next != NULL){
         nod_t *target = current->next;
         if(target->inf.Std_num==temp){
+	    printf("==============================================\n");
             printf("the student you Delete: %s\nID: %d\nScore: %lf\n",target->inf.name
                                                                    ,target->inf.Std_num
                                                                    ,target->inf.score);
+	    printf("==============================================\n");
             current->next = current->next->next;
             free(target);
             return 1;

