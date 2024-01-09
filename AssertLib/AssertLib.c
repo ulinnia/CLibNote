@@ -16,6 +16,7 @@ int main () {           //main function
 
     return(0);                              
     /*function return 0 normal exit(return means the function is over exit the function)*/
+
 }
 /*
 輸入一數，確認是否有大於等於十
