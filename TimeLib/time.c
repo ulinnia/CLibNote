@@ -46,6 +46,5 @@ int main(){
     printf("Current local time: %s", asctime(localTime));
         //asctime回傳一個指向代表tm結構的字串(pointer)
         //印出該字串
-
     return 0;
 }
